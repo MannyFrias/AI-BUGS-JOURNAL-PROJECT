@@ -10,11 +10,13 @@ app.use(express.json()); //parses the JSON bodies
 
 
 // server health check route 
-app.get('/api/health', (req, res) => {
+app.use('/api/health', (req, res) => {
     res.json({ status: 'ok', message: 'Server is running' })
 });
 
 //Routes
 app.use('/api/entries', entryRoutes);
+
+
 
 export default app;

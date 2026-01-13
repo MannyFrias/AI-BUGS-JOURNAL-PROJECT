@@ -20,7 +20,7 @@ const Home = () => {
             setEntries(data); 
         } catch (err) {
             setError('Failed to load entries, is the backend up?'); 
-            console.err(err)
+            console.error(err)
         } finally {
             setIsLoading(false); 
         }
